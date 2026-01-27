@@ -1,156 +1,440 @@
-<?php include('inc/header.php'); ?>
-<main>
-	<!-- Hero Section -->
-	<section id="hero">
-		<div class="custom-container">
-			<h1 class="fw-bold mb-0 fn-ubuntu">Umesh Shakya</h1>
-			<p class="text fw-medium fs-3 mb-3">CSS / Frontend Designer</p>
-			<p class="text fw-medium fs-4 mb-4">I create responsive, user-friendly websites</p>
-			<button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View My Work</button>
-			<button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact Me</button>
-		</div>
-	</section>
+<!DOCTYPE html>
+<html lang="en">
 
-	<!-- About Section -->
-	<section id="about">
-		<div class="custom-container">
-			<div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">About Me</div>
-			<p class="split fs-4">I’m a Frontend Designer who loves turning designs into <br>clean, functional, and responsive websites. <br>I focus on modern UI, clean code, and smooth user experience.</p>
-		</div>
-	</section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Umesh Shakya | Frontend Designer">
+    <meta name="keywords" content="Umesh Shakya | Frontend Designer">
+    <title>Umesh Shakya | Frontend Designer</title>
 
-<!-- Skills Section -->
-<section id="skills">
-	<div class="custom-container">
-		<div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Skills</div>
-		<ul class="">
-			<li data-aos="fade-up">HTML5</li>
-			<li data-aos="fade-up">CSS3 / SCSS</li>
-			<li data-aos="fade-up">JavaScript (ES6+)</li>
-			<li data-aos="fade-up">Bootstrap / Tailwind</li>
-			<li data-aos="fade-up">Responsive Design</li>
-			<li data-aos="fade-up">Git & GitHub</li>
-		</ul>
-	</div>
-</section>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="dist/img/site-icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="dist/img/site-icon/favicon.svg" />
+    <link rel="shortcut icon" href="dist/img/site-icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/img/site-icon/apple-touch-icon.png" />
+    <link rel="web-app-manifest" sizes="192x192" href="dist/img/site-icon/web-app-manifest-192x192.png" />
+    <link rel="web-app-manifest" sizes="512x512" href="dist/img/site-icon/web-app-manifest-512x512.png" />
+    <link rel="manifest" href="dist/img/site-icon/site.webmanifest" />
 
-<section id="experience">
-	<div class="experience-container">
-		<div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Work Experience</div>
-		<p class="section-intro text-center" data-aos="fade-up">
-			My professional journey as a frontend & CSS designer.
-		</p>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-		<div class="row row-cols-1 row-cols-md-2">
-			<div class="col">
-				<div class="experience-item h-100" data-aos="fade-up">
-					<h3>Frontend / CSS Designer</h3>
-					<p class="company fw-semibold mb-0">Miracle Interface Pvt. Ltd.</p>
-					<small class="date text-muted">2013 – Present</small>
-					<ul>
-						<li>Designed responsive layouts using HTML, CSS, and Flexbox/Grid</li>
-						<li>Converted Figma designs into pixel-perfect UI</li>
-						<li>Improved website performance and UI consistency</li>
-						<li>Collaborated with developers to enhance UX</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col">
-				<div class="experience-item h-100" data-aos="fade-up">
-					<h3>Graphic Designer</h3>
-					<p class="company fw-semibold mb-0">Miracle Interface Pvt. Ltd.</p>
-					<small class="date text-muted">2011 – 2013</small>
-					<ul>
-						<li>Retouched and enhanced images for websites, social media, and marketing campaigns.</li>
-						<li>Removed backgrounds, adjusted colors, and optimized images for digital platforms.</li>
-						<li>Collaborated with clients to translate ideas into creative design solutions.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+    <link rel="stylesheet" href="dist/css/thirdparty/bootstrap-5.3.8/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/thirdparty/aos-2.3.1/aos.min.css">
+    <link rel="stylesheet" href="dist/css/theme.min.css">
+</head>
+
+<header>
+    <nav class="navbar py-0 navbar-expand-lg header-navigation">
+        <div class="ms-auto d-flex align-items-center">
+            <div class="collapse navbar-collapse align-items-center justify-content-between">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link icon-link" href="#intro">Introduction
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link icon-link" href="#about">About Me
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link icon-link" href="#skills">Skills
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link icon-link" href="#projects">Projects
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link icon-link" href="#services">Services
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link icon-link" href="#contact">Contact
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="d-lg-none hamburger-menu bg-transparent border-0 shadow-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+            </button>
+        </div>
+    </nav>
+    <!--header-navigation-->
+
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close bg-transparent border-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link icon-link icon-link-hover" href="#intro">Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link icon-link icon-link-hover" href="#contact">Contact
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--offcanvas-->
+
+</header>
+<!--header-->
+
+<body>
+    <div class="smooth-wrapper">
+        <div class="smooth-content">
+
+            <main>
+                <!-- Hero Section -->
+                <section id="hero">
+                    <div class="custom-container">
+                        <h1 class="fw-bold mb-0 fn-ubuntu">Umesh Shakya</h1>
+                        <p class="text fw-medium fs-3 mb-3">CSS / Frontend Designer</p>
+                        <p class="text fw-medium fs-4 mb-4">I create responsive, user-friendly websites</p>
+                        <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View My Work</button>
+                        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact Me</button>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about">
+                    <div class="custom-container">
+                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">About Me</div>
+                        <p class="split fs-4">I’m a Frontend Designer who loves turning designs into <br>clean, functional, and responsive websites. <br>I focus on modern UI, clean code, and smooth user experience.</p>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills">
+                    <div class="custom-container">
+                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Skills</div>
+                        <ul class="">
+                            <li data-aos="fade-up">HTML5</li>
+                            <li data-aos="fade-up">CSS3 / SCSS</li>
+                            <li data-aos="fade-up">JavaScript (ES6+)</li>
+                            <li data-aos="fade-up">Bootstrap / Tailwind</li>
+                            <li data-aos="fade-up">Responsive Design</li>
+                            <li data-aos="fade-up">Git & GitHub</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="experience">
+                    <div class="experience-container">
+                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Work Experience</div>
+                        <p class="section-intro text-center" data-aos="fade-up">
+                            My professional journey as a frontend & CSS designer.
+                        </p>
+
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col">
+                                <div class="experience-item h-100" data-aos="fade-up">
+                                    <h3>Frontend / CSS Designer</h3>
+                                    <p class="company fw-semibold mb-0">Miracle Interface Pvt. Ltd.</p>
+                                    <small class="date text-muted">2013 – Present</small>
+                                    <ul>
+                                        <li>Designed responsive layouts using HTML, CSS, and Flexbox/Grid</li>
+                                        <li>Converted Figma designs into pixel-perfect UI</li>
+                                        <li>Improved website performance and UI consistency</li>
+                                        <li>Collaborated with developers to enhance UX</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="experience-item h-100" data-aos="fade-up">
+                                    <h3>Graphic Designer</h3>
+                                    <p class="company fw-semibold mb-0">Miracle Interface Pvt. Ltd.</p>
+                                    <small class="date text-muted">2011 – 2013</small>
+                                    <ul>
+                                        <li>Retouched and enhanced images for websites, social media, and marketing campaigns.</li>
+                                        <li>Removed backgrounds, adjusted colors, and optimized images for digital platforms.</li>
+                                        <li>Collaborated with clients to translate ideas into creative design solutions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
-<!-- Projects Section -->
-<section id="projects">
-	<div class="custom-container">
-		<div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Projects</div>
-		<div class="project-card" data-aos="fade-up">
-			<h3 class="fw-semibold">CMS Website</h3>
-			<p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
-			<a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-		</div>
-		<div class="project-card" data-aos="fade-up">
-			<h3 class="fw-semibold">Landing Page Website</h3>
-			<p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
-			<a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-		</div>
-		<div class="project-card" data-aos="fade-up">
-			<h3 class="fw-semibold">Portfolio Website</h3>
-			<p>My personal portfolio showcasing projects and skills.</p>
-			<a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-		</div>
-<!-- Add more project cards here -->
-</div>
-</section>
+                <!-- Projects Section -->
+                <section id="projects">
+                    <div class="custom-container">
+                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Projects</div>
+                        <div class="project-card" data-aos="fade-up">
+                            <h3 class="fw-semibold">CMS Website</h3>
+                            <p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
+                            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                        </div>
+                        <div class="project-card" data-aos="fade-up">
+                            <h3 class="fw-semibold">Landing Page Website</h3>
+                            <p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
+                            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                        </div>
+                        <div class="project-card" data-aos="fade-up">
+                            <h3 class="fw-semibold">Portfolio Website</h3>
+                            <p>My personal portfolio showcasing projects and skills.</p>
+                            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                        </div>
+                        <!-- Add more project cards here -->
+                    </div>
+                </section>
 
-<section id="works" class="projects-wrapper">
-	<div class="custom-container" data-aos="fade-up">
-		<div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">My Works</div>
-		<div class="custom-border">
-			<img src="dist/img/img_1.jpg" alt="" />
-			<img src="dist/img/img_2.jpg" alt="" />
-			<img src="dist/img/img_3.jpg" alt="" />
-			<img src="dist/img/img_4.jpg" alt="" />
-		</div>
-	</div>
-	<div class="buttons" data-aos="fade-up">
-		<button id="next">Next</button>
-		<button id="prev">Previous</button>
-	</div>
-</section>
+                <section id="works" class="projects-wrapper">
+                    <div class="custom-container" data-aos="fade-up">
+                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">My Works</div>
+                        <div class="custom-border">
+                            <img src="dist/img/img_1.jpg" alt="" />
+                            <img src="dist/img/img_2.jpg" alt="" />
+                            <img src="dist/img/img_3.jpg" alt="" />
+                            <img src="dist/img/img_4.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="buttons" data-aos="fade-up">
+                        <button id="next">Next</button>
+                        <button id="prev">Previous</button>
+                    </div>
+                </section>
 
-<!-- Services Section -->
-<section id="services">
-	<div class="custom-container">
-		<div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Services</div>
-		<ul class="">
-			<li>Website Design (UI)</li>
-			<li>Frontend Development</li>
-			<li>Responsive Layouts</li>
-			<li>Website Redesign</li>
-			<li>Bug Fixing</li>
-		</ul>
-	</div>
-</section>
+                <!-- Services Section -->
+                <section id="services">
+                    <div class="custom-container">
+                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Services</div>
+                        <ul class="">
+                            <li>Website Design (UI)</li>
+                            <li>Frontend Development</li>
+                            <li>Responsive Layouts</li>
+                            <li>Website Redesign</li>
+                            <li>Bug Fixing</li>
+                        </ul>
+                    </div>
+                </section>
 
-<!-- Contact Section -->
-<section id="contact">
-	<div class="custom-container">
-		<div class="contact-container">
-			<div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Contact Me</div>
-			<p class="fs-5">Have a project or need a frontend designer?<br> I’d love to hear from you.</p>
+                <!-- Contact Section -->
+                <section id="contact">
+                    <div class="custom-container">
+                        <div class="contact-container">
+                            <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Contact Me</div>
+                            <p class="fs-5">Have a project or need a frontend designer?<br> I’d love to hear from you.</p>
 
-			<div class="contact-info mb-4">
-				<p><strong>Name:</strong> Umesh Shakya</p>
-				<p><strong>Role:</strong> CSS / Frontend Designer</p>
-				<p><strong>Email:</strong> umeshshakya@gmail.com</p>
-				<p><strong>Location:</strong>Patan, Nepal</p>
-			</div>
+                            <div class="contact-info mb-4">
+                                <p><strong>Name:</strong> Umesh Shakya</p>
+                                <p><strong>Role:</strong> CSS / Frontend Designer</p>
+                                <p><strong>Email:</strong> umeshshakya@gmail.com</p>
+                                <p><strong>Location:</strong>Patan, Nepal</p>
+                            </div>
 
-			<form class="contact-form">
-				<input type="text" placeholder="Your Name" required>
-				<input type="email" placeholder="Your Email" required>
-				<textarea rows="4" placeholder="Your Message" required></textarea>
-				<button type="submit">Send Message</button>
-			</form>
-		</div>
-	</div>
-</section>
-</main>
-<!--index-page-->
+                            <form class="contact-form">
+                                <input type="text" placeholder="Your Name" required>
+                                <input type="email" placeholder="Your Email" required>
+                                <textarea rows="4" placeholder="Your Message" required></textarea>
+                                <button type="submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!--index-page-->
 
-<?php include('inc/footer.php'); ?>
+            <footer>
+                <p class="text-center mb-0">© 2026 Umesh Shakya — Frontend Designer</p>
+            </footer>
+        </div>
+        <!-- smooth-content -->
+    </div>
+    <!-- smooth-wrapper -->
+    <div class="topTop">
+        <img class="svg" src="dist/img/icons/icon-up.svg" alt="Scroll to Top">
+    </div>
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/aos.min.js"></script>
+    <!-- GSAP core -->
+    <script src="dist/js/gsap.min.js"></script>
 
+    <!-- ScrollTrigger (required by ScrollSmoother) -->
+    <script src="dist/js/ScrollTrigger.min.js"></script>
 
+    <!-- ScrollSmoother plugin -->
+    <script src="dist/js/ScrollSmoother.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+    <script src="dist/js/custom.js"></script>
+
+    <script>
+    let split, animation;
+
+    function setup() {
+        split && split.revert();
+        animation && animation.revert();
+        split = SplitText.create(".text", { type: "chars" });
+
+        // Animate on scroll
+        gsap.from(split.chars, {
+            scrollTrigger: {
+                trigger: ".text", // element to trigger animation
+                start: "top 80%", // when top of element hits 80% of viewport
+            },
+            x: 150,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power4.out",
+            stagger: 0.04
+        });
+    }
+
+    // Initialize animation
+    setup();
+
+    // Recalculate on window resize
+    window.addEventListener("resize", setup);
+    </script>
+
+    <script>
+    gsap.registerPlugin(SplitText, ScrollTrigger);
+
+    console.clear();
+
+    gsap.set(".split", { opacity: 1 });
+
+    document.fonts.ready.then(() => {
+        let containers = gsap.utils.toArray(".custom-container");
+
+        containers.forEach((container) => {
+            let text = container.querySelector(".split");
+            let animation;
+
+            SplitText.create(text, {
+                type: "words,lines",
+                mask: "lines",
+                linesClass: "line",
+                autoSplit: true,
+                onSplit: (instance) => {
+                    console.log("split")
+                    return gsap.from(instance.lines, {
+                        yPercent: 120,
+                        stagger: 0.1,
+                        scrollTrigger: {
+                            trigger: container,
+                            // markers: true,
+                            scrub: true,
+                            start: "clamp(top center)",
+                            end: "clamp(bottom center)"
+                        }
+                    });
+                }
+            });
+        });
+    });
+    </script>
+
+    <script>
+    gsap.registerPlugin(Flip);
+
+    const container = document.querySelector(".custom-border");
+    const cards = gsap.utils.toArray("img", container);
+    const nextBtn = document.getElementById("next");
+    const prevBtn = document.getElementById("prev");
+    let isAnimating = false;
+
+    nextBtn.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        updateCaterpillar(true);
+    });
+    prevBtn.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        updateCaterpillar(false);
+    });
+
+    const updateCaterpillar = (forward) => {
+        const cards = gsap.utils.toArray("img", container);
+        const first = cards[0];
+        const last = cards[cards.length - 1];
+        const state = Flip.getState(cards);
+        let newCard = document.createElement("img");
+        gsap.set(newCard, { scale: 0, opacity: 0 });
+
+        if (forward) {
+            newCard.src = first.src;
+            container.append(newCard);
+            first.classList.add("hide");
+        } else {
+            newCard.src = last.src;
+            newCard.innerText = last.innerText;
+            container.prepend(newCard);
+            last.classList.add("hide");
+        }
+        Flip.from(state, {
+            targets: "img",
+            fade: true,
+            absoluteOnLeave: true,
+            onEnter: (els) => {
+                gsap.to(els, {
+                    opacity: 1,
+                    scale: 1,
+                    transformOrigin: forward ? "bottom right" : "bottom left"
+                });
+            },
+            onLeave: (els) => {
+                gsap.to(els, {
+                    opacity: 0,
+                    scale: 0,
+                    transformOrigin: forward ? "bottom left" : "bottom right",
+                    onComplete: () => {
+                        els[0].remove();
+                        isAnimating = false;
+                    }
+                });
+            }
+        });
+    };
+    </script>
+
+</body>
+
+</html>
