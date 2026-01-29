@@ -12,7 +12,9 @@
 <script src="dist/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/aos.min.js"></script>
 <!-- GSAP core -->
-<script src="dist/js/gsap.min.js"></script>
+<!-- <script src="dist/js/gsap.min.js"></script> -->
+<script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
+<script src="https://assets.codepen.io/16327/Observer.min.js"></script>
 
 <!-- ScrollTrigger (required by ScrollSmoother) -->
 <script src="dist/js/ScrollTrigger.min.js"></script>

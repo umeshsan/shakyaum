@@ -1,0 +1,11 @@
+// Import base styles
+@forward 'themes/resets';
+@forward 'themes/mixins';
+@forward 'themes/vars';
+
+// Import global styles
+@forward 'themes/styles';
+
+// Import layout components
+@forward 'themes/header';
+@forward 'themes/footer';

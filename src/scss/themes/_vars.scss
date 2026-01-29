@@ -1,0 +1,32 @@
+// Import the color module from Sass
+@use "sass:color";
+
+// COLORS
+$white: #FFFFFF;
+$whiteSmoke: #f5f5f5;
+
+$black: #000000;
+$dark: #666666;
+
+$lime: #00bfa6;
+$blue: #1e88e5;
+
+// FONTS STACKS
+$font-family: "Montserrat",
+"Ubuntu",
+serif !important;
+
+// BASE FONTS
+$font-family-base: $font-family;
+$font-size-base: 18px;
+$font-color-base: $black;
+
+$default-transition : all ease 0.5s;
+
+.fn-montserrat {
+    font-family: "Montserrat" !important;
+}
+
+.fn-ubuntu {
+    font-family: "Ubuntu" !important;
+}

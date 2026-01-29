@@ -1,0 +1,13 @@
+@use "./vars"as *;
+@use "./mixins"as *;
+@use "sass:color";
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #e0e0e0;
+    color: #555;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+}

@@ -1,0 +1,159 @@
+@use "./vars"as *;
+@use "./mixins"as *;
+@use "sass:color";
+
+:root {
+    --headerHeight: 60px;
+    --headerStickyHeight: 50px;
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+header {
+    transition: all ease 0.5s;
+
+    .logo a img {
+        max-height: var(--headerHeight);
+
+        @include respond-to(lg) {
+            max-height: var(--headerStickyHeight);
+        }
+    }
+
+    .header-navigation {
+        height: var(--headerHeight);
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: transform 0.35s ease;
+        transform: translateY(0);
+        z-index: 9;
+
+        @include respond-to(lg) {
+            height: var(--headerStickyHeight);
+        }
+
+        .navbar-nav {
+            a {
+                padding-inline: 30px !important;
+                padding-block: 10px;
+                transition: all ease 0.5s;
+                font-size: 14px;
+                display: block;
+                color: $white;
+
+                &.active,
+                &:hover {
+                    color: $dark;
+                    opacity: 1 !important;
+                }
+
+                svg {
+                    transform: rotate(90deg);
+                }
+            }
+
+            li.active a {
+                color: $blue;
+            }
+        }
+
+        &.is-sticky {
+            position: fixed;
+            transform: translateY(-100%);
+            animation: slideDown 0.35s forwards;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            height: var(--headerStickyHeight);
+            background: $white;
+
+            a {
+                color: $dark;
+
+                &.active,
+                &:hover {
+                    color: $blue;
+                    opacity: 1 !important;
+                }
+            }
+
+            .logo a img {
+                max-height: var(--headerStickyHeight);
+            }
+        }
+    }
+}
+
+.hamburger-menu {
+    margin-left: 50px;
+    padding-right: 12px;
+
+    span {
+        width: 46px;
+        height: 3px;
+        display: block;
+        background: $black;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.offcanvas {
+    background: linear-gradient(135deg, $lime, $blue);
+
+    .btn-close {
+        font-size: 30px;
+        filter: invert(1);
+    }
+
+    .offcanvas-header {
+
+        a img,
+        button {
+            opacity: 1;
+        }
+
+        a img {
+            max-width: 200px;
+        }
+    }
+
+    .header-buttons a {
+        height: 60px;
+        margin-bottom: 8px;
+
+        @include respond-to(sm) {
+            height: 50px;
+        }
+    }
+
+    .navbar-nav {
+        a {
+            padding-block: 12px;
+            font-weight: bold;
+            transition: all ease 0.5s;
+            font-size: 14px;
+            display: block;
+
+            &.active,
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+@use "./vars"as *;
+@use "sass:math";
+@use "sass:map";
+
+// Button Style
+@mixin button-style($background: $dark,
+$color: $white,
+$font-size: 16px,
+$hover-background: $dark,
+$hover-color: $white) {
+    background: $background;
+    color: $color;
+    font-size: $font-size;
+    transition: $default-transition;
+
+    // Hover effect
+    &:hover {
+        background: $hover-background;
+        color: $hover-color;
+        @include opacity($opacity: 0.8);
+    }
+}
+
+// Text style
+@mixin text-style($color: $dark, $font-size: 16px) {
+    color: $color;
+    font-size: $font-size;
+}
+
+// Center Flexbox
+@mixin flexbox($display: flex, $align: center, $justify: center, $flex-direction: row, $wrap: nowrap) {
+    display: -webkit-box; // Older Safari and iOS
+    display: -moz-box; // Older Firefox
+    display: -ms-flexbox; // IE 10
+    display: -webkit-flex; // Modern browsers
+    display: flex; // Modern browsers
+
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+
+    align-items: $align;
+    justify-content: $justify;
+
+    // Add vendor prefixes for older browsers
+    @each $prefix in (-webkit-, -moz-, -ms-) {
+        #{$prefix}flex-direction: $flex-direction;
+        #{$prefix}flex-wrap: $wrap;
+        #{$prefix}align-items: $align;
+        #{$prefix}justify-content: $justify;
+    }
+}
+
+// Breakpoints map
+$breakpoints: (xs: 320px,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1440px,
+3xl: 1600px);
+
+// Mixin for breakpoint
+@mixin respond-to($breakpoint) {
+    $size: map.get($breakpoints, $breakpoint); // Using map.get() instead of map-get()
+
+    @if $size {
+        @media (max-width: $size) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Breakpoint #{$breakpoint} not found in the \$breakpoints map.";
+    }
+}
+
+// Define a function to convert px to rem
+@function rem($px) {
+    $base-font-size: 16px; // Base font-size for conversion
+    @return math.div($px, $base-font-size) * 1rem;
+}
+
+// Define a mixin for typography
+@mixin typography($font-size, $line-height: 1.5) {
+    font-size: rem($font-size);
+    line-height: $line-height;
+}
+
+@mixin img-wrapper($object-fit: cover, $object-position: center, $aspect-ratio: 1) {
+    width: 100%;
+    height: 100%;
+    object-fit: $object-fit;
+    object-position: $object-position;
+    aspect-ratio: $aspect-ratio;
+    transition: $default-transition;
+
+    &:hover {
+        @include opacity;
+    }
+}
+
+// Position centering horizontally and vertically
+@mixin position-center($position: absolute, $offset-x: 50%, $offset-y: 50%, $transform-x: -50%, $transform-y: -50%) {
+    position: $position;
+    top: $offset-y;
+    left: $offset-x;
+    transform: translate($transform-x, $transform-y);
+}
+
+// Text Truncation
+@mixin line-clamp($lines, $line-height: 1.5rem) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: $lines;
+    max-height: $lines * $line-height;
+    line-height: $line-height;
+    white-space: normal;
+}
+
+
+// Clearfix Mixin
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
