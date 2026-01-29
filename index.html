@@ -13,8 +13,6 @@
     <link rel="icon" type="image/svg+xml" href="dist/img/site-icon/favicon.svg" />
     <link rel="shortcut icon" href="dist/img/site-icon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="dist/img/site-icon/apple-touch-icon.png" />
-    <link rel="web-app-manifest" sizes="192x192" href="dist/img/site-icon/web-app-manifest-192x192.png" />
-    <link rel="web-app-manifest" sizes="512x512" href="dist/img/site-icon/web-app-manifest-512x512.png" />
     <link rel="manifest" href="dist/img/site-icon/site.webmanifest" />
 
     <!--Google Fonts-->
@@ -33,7 +31,7 @@
             <div class="collapse navbar-collapse align-items-center justify-content-between">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link icon-link" href="#intro">Introduction
+                        <a class="nav-link icon-link" href="#hero">Introduction
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
                                 <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>
@@ -54,14 +52,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link icon-link" href="#projects">Projects
+                        <a class="nav-link icon-link" href="#experiences">Experiences
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
                                 <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link icon-link" href="#services">Services
+                        <a class="nav-link icon-link" href="#projects">Projects
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
                                 <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>
@@ -93,7 +91,7 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link icon-link icon-link-hover" href="#intro">Introduction</a>
+                    <a class="nav-link icon-link icon-link-hover" href="#hero">Introduction</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About Me</a>
@@ -102,10 +100,10 @@
                     <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#experiences">Experiences</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link icon-link icon-link-hover" href="#contact">Contact
@@ -130,6 +128,7 @@
                 <!-- Hero Section -->
                 <section id="hero">
                     <div class="custom-container">
+                        <img src="dist/img/profile.png" alt="Umesh Shakya" class="profile-pic">
                         <h1 class="fw-bold mb-0 fn-ubuntu">Umesh Shakya</h1>
                         <p class="text fw-medium fs-3 mb-3">CSS / Frontend Designer</p>
                         <p class="text fw-medium fs-4 mb-4">I create responsive, user-friendly websites</p>
@@ -142,22 +141,70 @@
                 <section id="about">
                     <div class="custom-container">
                         <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">About Me</div>
-                        <p class="split fs-4">I’m a Frontend Designer who loves turning designs into <br>clean, functional, and responsive websites. <br>I focus on modern UI, clean code, and smooth user experience.</p>
+                        <div class="fs-4">
+                            <p class="mb-4" data-aos="fade-up">
+                                Frontend Designer with a designer’s eye and a developer’s mindset.<br>
+                                I’ve been part of <span class="text-dark">Miracle Interface since 2011</span>, where my journey began as a<span class="text-dark"> Graphic Designer</span> and evolved into a <span class="text-dark">Frontend Designer in 2014.</span>
+                            </p>
+                            <p class="mb-4" data-aos="fade-up">
+                                With formal training in <span class="text-dark">Graphic Designing and Web Designing</span>, I transformed my passion for visuals into interactive, user-friendly web experiences. <span class="text-dark">Miracle Interface gave me the opportunity to grow from graphics to frontend</span>, and today I work as a<span class="text-dark"> CSS / Frontend Designer</span>, doing work I truly enjoy.
+                            </p>
+                            <p class="mb-4" data-aos="fade-up">
+                                I’m happy in my role, continuously learning, and passionate about creating clean, functional, and visually engaging interfaces.
+                            </p>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Skills Section -->
                 <section id="skills">
                     <div class="custom-container">
-                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Skills</div>
-                        <ul class="">
-                            <li data-aos="fade-up">HTML5</li>
-                            <li data-aos="fade-up">CSS3 / SCSS</li>
-                            <li data-aos="fade-up">JavaScript (ES6+)</li>
-                            <li data-aos="fade-up">Bootstrap / Tailwind</li>
-                            <li data-aos="fade-up">Responsive Design</li>
-                            <li data-aos="fade-up">Git & GitHub</li>
-                        </ul>
+                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Skills & Tools</div>
+                        <div class="skill-category design">
+                            <h3 class="text-center mb-4 fn-ubuntu" data-aos="fade-up">Design</h3>
+                            <ul class="skills-list" data-aos="fade-up">
+                                <!-- Design -->
+                                <li class="skill design">Graphic Design</li>
+                                <li class="skill design">UI / Web Design</li>
+                                <li class="skill design">Visual Layout & Color Theory</li>
+                                <li class="skill design">Branding & Creative Design</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category frontend">
+                            <h3 class="text-center mb-4 fn-ubuntu" data-aos="fade-up">Frontend</h3>
+                            <ul class="skills-list" data-aos="fade-up">
+                                <!-- Frontend -->
+                                <li class="skill frontend">HTML5</li>
+                                <li class="skill frontend">CSS3</li>
+                                <li class="skill frontend">Responsive Design</li>
+                                <li class="skill frontend">Flexbox & Grid</li>
+                                <li class="skill frontend">Frontend Styling</li>
+                                <li class="skill frontend">Basic JavaScript</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category tools">
+                            <h3 class="text-center mb-4 fn-ubuntu" data-aos="fade-up">Tools</h3>
+                            <ul class="skills-list" data-aos="fade-up">
+                                <!-- Tools -->
+                                <li class="skill tools">Figma</li>
+                                <li class="skill tools">Photoshop</li>
+                                <li class="skill tools">Illustrator</li>
+                                <li class="skill tools">VS Code</li>
+                                <li class="skill tools">Browser DevTools</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category workflow">
+                            <h3 class="text-center mb-4 fn-ubuntu" data-aos="fade-up">Workflow</h3>
+                            <ul class="skills-list" data-aos="fade-up">
+                                <!-- Workflow -->
+                                <li class="skill workflow">Design-to-Code Conversion</li>
+                                <li class="skill workflow">Pixel-Perfect Implementation</li>
+                                <li class="skill workflow">Cross-Browser Compatibility</li>
+                                <li class="skill workflow">UI Consistency & Optimization</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
@@ -168,7 +215,7 @@
                             My professional journey as a frontend & CSS designer.
                         </p>
 
-                        <div class="row row-cols-1 row-cols-md-2">
+                        <div class="row row-cols-1 row-cols-md-2 g-5">
                             <div class="col">
                                 <div class="experience-item h-100" data-aos="fade-up">
                                     <h3>Frontend / CSS Designer</h3>
@@ -198,57 +245,84 @@
                     </div>
                 </section>
 
-
                 <!-- Projects Section -->
                 <section id="projects">
                     <div class="custom-container">
                         <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Projects</div>
-                        <div class="project-card" data-aos="fade-up">
-                            <h3 class="fw-semibold">CMS Website</h3>
-                            <p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
-                            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                        <div class="row row-cols-md-2">
+                            <div class="col">
+                                <div class="project-card" data-aos="fade-up">
+                                    <figure class="image-container shadow-sm">
+                                        <img src="dist/img/works-1.png" alt="" />
+                                    </figure>
+                                    <div class="">
+                                        <h3 class="fw-semibold">CMS Website</h3>
+                                        <p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
+                                        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="project-card" data-aos="fade-up">
+                                    <figure class="image-container shadow-sm">
+                                        <img src="dist/img/works-2.png" alt="" />
+                                    </figure>
+                                    <div class="">
+                                        <h3 class="fw-semibold">Landing Page Website</h3>
+                                        <p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
+                                        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="project-card" data-aos="fade-up">
+                                    <figure class="image-container shadow-sm">
+                                        <img src="dist/img/works-3.png" alt="" />
+                                    </figure>
+                                    <div class="">
+                                        <h3 class="fw-semibold">Hugo Website</h3>
+                                        <p>My personal portfolio showcasing projects and skills.</p>
+                                        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="project-card" data-aos="fade-up">
+                                    <figure class="image-container shadow-sm">
+                                        <img src="dist/img/works-4.png" alt="" />
+                                    </figure>
+                                    <div class="">
+                                        <h3 class="fw-semibold">Travel & Tour Website</h3>
+                                        <p>My personal portfolio showcasing projects and skills.</p>
+                                        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="project-card" data-aos="fade-up">
+                                    <figure class="image-container shadow-sm">
+                                        <img src="dist/img/works-5.png" alt="" />
+                                    </figure>
+                                    <div class="">
+                                        <h3 class="fw-semibold">Portfolio Website</h3>
+                                        <p>My personal portfolio showcasing projects and skills.</p>
+                                        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="project-card" data-aos="fade-up">
+                                    <figure class="image-container shadow-sm">
+                                        <img src="dist/img/works-6.png" alt="" />
+                                    </figure>
+                                    <div class="">
+                                        <h3 class="fw-semibold">Portfolio Website</h3>
+                                        <p>My personal portfolio showcasing projects and skills.</p>
+                                        <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-card" data-aos="fade-up">
-                            <h3 class="fw-semibold">Landing Page Website</h3>
-                            <p>Responsive landing page built with HTML, CSS, and JavaScript.</p>
-                            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-                        </div>
-                        <div class="project-card" data-aos="fade-up">
-                            <h3 class="fw-semibold">Portfolio Website</h3>
-                            <p>My personal portfolio showcasing projects and skills.</p>
-                            <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-                        </div>
-                        <!-- Add more project cards here -->
-                    </div>
-                </section>
-
-                <section id="works" class="projects-wrapper">
-                    <div class="custom-container" data-aos="fade-up">
-                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">My Works</div>
-                        <div class="custom-border">
-                            <img src="dist/img/img_1.jpg" alt="" />
-                            <img src="dist/img/img_2.jpg" alt="" />
-                            <img src="dist/img/img_3.jpg" alt="" />
-                            <img src="dist/img/img_4.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="buttons" data-aos="fade-up">
-                        <button id="next">Next</button>
-                        <button id="prev">Previous</button>
-                    </div>
-                </section>
-
-                <!-- Services Section -->
-                <section id="services">
-                    <div class="custom-container">
-                        <div class="title fs-1 text-center mb-5 fw-bold fn-ubuntu" data-aos="fade-up">Services</div>
-                        <ul class="">
-                            <li>Website Design (UI)</li>
-                            <li>Frontend Development</li>
-                            <li>Responsive Layouts</li>
-                            <li>Website Redesign</li>
-                            <li>Bug Fixing</li>
-                        </ul>
                     </div>
                 </section>
 
@@ -301,7 +375,6 @@
     <script src="dist/js/ScrollSmoother.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
-    <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
     <script src="dist/js/custom.js"></script>
 
     <script>
@@ -332,109 +405,6 @@
     // Recalculate on window resize
     window.addEventListener("resize", setup);
     </script>
-
-    <script>
-    gsap.registerPlugin(SplitText, ScrollTrigger);
-
-    console.clear();
-
-    gsap.set(".split", { opacity: 1 });
-
-    document.fonts.ready.then(() => {
-        let containers = gsap.utils.toArray(".custom-container");
-
-        containers.forEach((container) => {
-            let text = container.querySelector(".split");
-            let animation;
-
-            SplitText.create(text, {
-                type: "words,lines",
-                mask: "lines",
-                linesClass: "line",
-                autoSplit: true,
-                onSplit: (instance) => {
-                    console.log("split")
-                    return gsap.from(instance.lines, {
-                        yPercent: 120,
-                        stagger: 0.1,
-                        scrollTrigger: {
-                            trigger: container,
-                            // markers: true,
-                            scrub: true,
-                            start: "clamp(top center)",
-                            end: "clamp(bottom center)"
-                        }
-                    });
-                }
-            });
-        });
-    });
-    </script>
-
-    <script>
-    gsap.registerPlugin(Flip);
-
-    const container = document.querySelector(".custom-border");
-    const cards = gsap.utils.toArray("img", container);
-    const nextBtn = document.getElementById("next");
-    const prevBtn = document.getElementById("prev");
-    let isAnimating = false;
-
-    nextBtn.addEventListener("click", () => {
-        if (isAnimating) return;
-        isAnimating = true;
-        updateCaterpillar(true);
-    });
-    prevBtn.addEventListener("click", () => {
-        if (isAnimating) return;
-        isAnimating = true;
-        updateCaterpillar(false);
-    });
-
-    const updateCaterpillar = (forward) => {
-        const cards = gsap.utils.toArray("img", container);
-        const first = cards[0];
-        const last = cards[cards.length - 1];
-        const state = Flip.getState(cards);
-        let newCard = document.createElement("img");
-        gsap.set(newCard, { scale: 0, opacity: 0 });
-
-        if (forward) {
-            newCard.src = first.src;
-            container.append(newCard);
-            first.classList.add("hide");
-        } else {
-            newCard.src = last.src;
-            newCard.innerText = last.innerText;
-            container.prepend(newCard);
-            last.classList.add("hide");
-        }
-        Flip.from(state, {
-            targets: "img",
-            fade: true,
-            absoluteOnLeave: true,
-            onEnter: (els) => {
-                gsap.to(els, {
-                    opacity: 1,
-                    scale: 1,
-                    transformOrigin: forward ? "bottom right" : "bottom left"
-                });
-            },
-            onLeave: (els) => {
-                gsap.to(els, {
-                    opacity: 0,
-                    scale: 0,
-                    transformOrigin: forward ? "bottom left" : "bottom right",
-                    onComplete: () => {
-                        els[0].remove();
-                        isAnimating = false;
-                    }
-                });
-            }
-        });
-    };
-    </script>
-
 </body>
 
 </html>
